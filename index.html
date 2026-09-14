@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Server Loading</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video id="background-video" autoplay muted loop playsinline>
+        <source src="loading.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+
+    <main class="loading-screen">
+        <section class="content">
+            <p class="eyebrow">PHILIPPGAMING</p>
+            <h1>Willkommen auf dem Server</h1>
+            <p id="player-name" class="player-name">Spieler wird geladen ...</p>
+
+            <div class="progress-track" aria-hidden="true">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+            <p id="status" class="status">Verbindung wird hergestellt ...</p>
+        </section>
+
+        <aside class="team-panel">
+            <p class="panel-label">TEAM</p>
+            <div class="team-list">
+                <p><span>Projektleitung</span><strong>Thombus</strong></p>
+                <p><span>Serverleitung</span><strong>PhilippGaming</strong></p>
+                <p><span>stv. Serverleitung</span><strong>Yanik</strong></p>
+                <p><span>Community Developer</span><strong>Lemon</strong></p>
+                <p><span>Teamleitung</span><strong>Rasch</strong></p>
+                <p><span>stv. Teamleitung</span><strong>Ori</strong></p>
+            </div>
+        </aside>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
