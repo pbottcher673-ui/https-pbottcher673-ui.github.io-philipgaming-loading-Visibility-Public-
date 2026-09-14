@@ -5,10 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PhilippGaming Loading</title>
 <link rel="stylesheet" href="style.css">
+<style>#sound-button{position:fixed;right:28px;bottom:28px;z-index:5;padding:12px 18px;border:1px solid #7de7ff;background:rgba(5,14,21,.9);color:#f1fbff;font:600 16px Rajdhani,sans-serif;cursor:pointer}#sound-button:hover{background:#123b4a}#sound-button:disabled{opacity:.65;cursor:default}</style>
 </head>
 <body>
-<video id="background-video" autoplay muted loop playsinline preload="auto"><source src="loading.mp4" type="video/mp4"></video>
-<div class="shade"></div>
+<video id="background-video" autoplay muted loop playsinline preload="auto">
+    <source src="loading.mp4" type="video/mp4">
+</video>
+<button id="sound-button" type="button">Ton aktivieren</button>
 <main class="screen">
 <section class="welcome">
 <p class="eyebrow">PHILIPPGAMING</p>

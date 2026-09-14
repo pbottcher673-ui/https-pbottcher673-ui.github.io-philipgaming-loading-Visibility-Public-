@@ -1,6 +1,7 @@
 const nameElement = document.getElementById('player-name');
 const statusElement = document.getElementById('status');
 const progressElement = document.getElementById('progress-bar');
+const soundButton = document.getElementById('sound-button');
 
 function GameDetails(serverName, serverUrl, mapName, maxPlayers, steamId) {
     nameElement.textContent = steamId ? `SteamID: ${steamId}` : 'Steam-Spieler';
@@ -35,5 +36,13 @@ window.addEventListener('load', () => {
     video.load();
     video.play().catch(() => {
         statusElement.textContent = 'Video konnte nicht automatisch gestartet werden.';
+    });
+
+    soundButton.addEventListener('click', () => {
+        video.muted = false;
+        video.volume = 1;
+        video.play();
+        soundButton.textContent = 'Ton aktiv';
+        soundButton.disabled = true;
     });
 });
