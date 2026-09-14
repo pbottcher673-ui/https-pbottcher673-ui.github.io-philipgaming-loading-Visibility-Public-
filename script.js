@@ -26,8 +26,14 @@ function SetStatusChanged(status) {
 
 window.addEventListener('load', () => {
     const video = document.getElementById('background-video');
-    video.volume = 1;
+    video.autoplay = true;
+    video.loop = true;
+    video.muted = true;
+    video.setAttribute('muted', '');
+    video.setAttribute('autoplay', '');
+    video.setAttribute('loop', '');
+    video.load();
     video.play().catch(() => {
-        statusElement.textContent = 'Videoton wurde vom Browser blockiert.';
+        statusElement.textContent = 'Video konnte nicht automatisch gestartet werden.';
     });
 });
